@@ -97,7 +97,7 @@ def verify_user_credentials(user)
 end
 
 def track_failed_logins(attempts)
-  puts 'Invalid email/password'
+  print "\nInvalid email/password\n"
   attempts += 1
   if attempts >= MAX_LOGIN_ATTEMPTS
     puts 'Too many failed login attempts.'
@@ -188,7 +188,7 @@ while logged_in == false
   system 'clear'
 end
 
-puts "Hello, #{current_user[:email]}"
+print "Hello, #{current_user[:email]}\n\n"
 current_selection = '0'
 while current_selection != OPTIONS[:exit]
   print_credentials_menu
